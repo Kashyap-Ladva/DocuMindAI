@@ -68,10 +68,10 @@ Receive grounded answers with sources
 🧠 Authors
 
 Kashyap
-Computer Engineering | AI & Data Science
+Computer Engineer | AI & Data Science
 
 Manan
 Computer Engineer | Full Stack
 
 Kaushal 
-computer Engineer | AI & Data Science
+Computer Engineer | AI & Data Science
