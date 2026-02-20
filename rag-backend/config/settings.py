@@ -15,8 +15,9 @@ if GROQ_API_KEY is None:
 # ===============================
 # DATA PATHS
 # ===============================
-RAW_DATA_DIR = "data/raw"
-VECTOR_DB_DIR = "vectorstore/faiss_index"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
+VECTOR_DB_DIR = os.path.join(BASE_DIR, "vectorstore", "faiss_index")
 
 # ===============================
 # CHUNKING CONFIG
@@ -37,3 +38,12 @@ EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 # VECTOR STORE CONFIG
 # ===============================
 VECTOR_DB_TYPE = "faiss"
+
+
+# ===============================
+# UPLOAD LIMITS
+# ===============================
+MAX_PDF_SIZE_MB = int(os.getenv("MAX_PDF_SIZE_MB", 10))
+MAX_TEXT_SIZE_MB = int(os.getenv("MAX_TEXT_SIZE_MB", 5))
+MAX_PDF_PAGES = int(os.getenv("MAX_PDF_PAGES", 100))
+MAX_TEXT_CHARS = int(os.getenv("MAX_TEXT_CHARS", 100000))
