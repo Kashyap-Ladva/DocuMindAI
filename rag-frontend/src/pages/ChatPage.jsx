@@ -150,8 +150,8 @@ export default function ChatPage() {
         {/* Greeting Stack */}
         {!hasMessages && (
           <div className="flex flex-col items-center text-center mb-12 w-full animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-3 text-center">POLICY ASSISTANT</h1>
-            <p className="text-base text-gray-400 mb-8 text-center">Your intelligent policy assistant</p>
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-3 text-center">DocuMindAI</h1>
+            <p className="text-base text-gray-400 mb-8 text-center">Your intelligent document assistant</p>
             <h2 className="text-2xl md:text-3xl font-medium text-white mb-8 mt-16 text-center">Where should we start?</h2>
           </div>
         )}
