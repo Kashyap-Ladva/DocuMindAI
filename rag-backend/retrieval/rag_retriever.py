@@ -2,10 +2,11 @@ from vectorstore.faiss_store import load_faiss_index
 
 
 def retrieve_context(query: str, k: int = 3):
+    """
+    Retrieve relevant documents with similarity scores.
+    Returns a list of tuples: (Document, score)
+    """
     db = load_faiss_index()
-    results = db.similarity_search(query, k=k)
+    results_with_score = db.similarity_search_with_score(query, k=k)
 
-    context = "\n\n".join(doc.page_content for doc in results)
-    metadata = [doc.metadata for doc in results]
-
-    return context, metadata
+    return results_with_score

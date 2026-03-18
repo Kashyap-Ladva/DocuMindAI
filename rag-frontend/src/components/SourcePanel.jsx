@@ -7,7 +7,11 @@ export default function SourcePanel({ sources }) {
       <ul>
         {sources.map((s, i) => (
           <li key={i}>
-            {s.source} — page {s.page}
+            <strong>{s.document}</strong>
+            {s.page ? ` — page ${s.page}` : ""}
+            {s.excerpt && (
+              <p className="excerpt">"{s.excerpt}"</p>
+            )}
           </li>
         ))}
       </ul>

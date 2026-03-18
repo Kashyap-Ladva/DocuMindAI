@@ -1,4 +1,4 @@
-from loaders.pdf_loader import load_all_pdfs
+from loaders.main_loader import load_all_documents
 from preprocessing.chunker import chunk_documents
 from vectorstore.faiss_store import build_faiss_index, save_faiss_index
 
@@ -6,8 +6,8 @@ from vectorstore.faiss_store import build_faiss_index, save_faiss_index
 def run_indexing_pipeline():
     print("Starting RAG indexing pipeline...")
 
-    # Step 1: Load PDFs
-    documents = load_all_pdfs()
+    # Step 1: Load documents (PDFs and Text files)
+    documents = load_all_documents()
 
     # Step 2: Chunk documents
     chunks = chunk_documents(documents)
